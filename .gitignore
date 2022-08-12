@@ -1,2 +1,4 @@
-/node_packages
 /.vscode
+
+dist/
+node_modules/
