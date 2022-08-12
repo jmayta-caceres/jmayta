@@ -69,5 +69,12 @@ module.exports = (env, argv) => {
         ],
       }),
     ],
+    resolve: {
+      alias: {
+        "@images": path.resolve(__dirname, "src/assets/images/"),
+        "@js": path.resolve(__dirname, "src/javascript/"),
+        "@styles": path.resolve(__dirname, "src/styles/"),
+      },
+    },
   };
 };
