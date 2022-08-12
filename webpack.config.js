@@ -36,6 +36,13 @@ module.exports = (env, argv) => {
   const isProduction = mode === "production";
 
   return {
+    devServer: {
+      open: {
+        app: {
+          name: "firefox-dev-edition",
+        },
+      },
+    },
     entry: {
       index: path.resolve(__dirname, "src", "index.js"),
     },
