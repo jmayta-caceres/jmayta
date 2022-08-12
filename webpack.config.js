@@ -1,7 +1,7 @@
 // ------------------------------------------------- Global imports & variables
-
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const path = require("path");
 
@@ -59,6 +59,14 @@ module.exports = (env, argv) => {
       }),
       new MiniCSSExtractPlugin({
         filename: isProduction ? "style.[contenthash].css" : "style.css",
+      }),
+      new CopyPlugin({
+        patterns: [
+          {
+            from: path.resolve(__dirname, "src", "assets/"),
+            to: "assets",
+          },
+        ],
       }),
     ],
   };
