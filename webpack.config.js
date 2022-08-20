@@ -1,15 +1,28 @@
-// ------------------------------------------------- Global imports & variables
+// --------------------------------------------------------------------- Global imports & variables
+const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
 
-const path = require("path");
+// ------------------------------------------------------------------------------------------ Rules
+// HTML & sources
+const ruleForHTMLImages = [
+  {
+    test: /\.html$/i,
+    loader: "html-loader",
+  },
+  {
+    test: /\.(png|jpe?g|gif|ico)$/i,
+    type: "asset/resource",
+    generator: {
+      filename: "images/[name]-[hash][ext]",
+    },
+  },
+];
 
-// ---------------------------------------------------------------------- Rules
 // Style
 const ruleForStyles = [
   {
-    test: /\.css|\.s[ca]ss$/i,
+    test: /\.s[ca]ss$/i,
     use: [MiniCSSExtractPlugin.loader, "css-loader", "sass-loader"],
   },
 ];
@@ -25,10 +38,10 @@ const ruleForJavaScript = [
   },
 ];
 
-// ----------------------------------------------------------------------- Main
+// ------------------------------------------------------------------------------------------- Main
 
 // Rules loader
-const rules = [].concat(ruleForStyles, ruleForJavaScript);
+const rules = [].concat(ruleForStyles, ruleForHTMLImages, ruleForJavaScript);
 
 // Configuration
 module.exports = (env, argv) => {
@@ -37,6 +50,7 @@ module.exports = (env, argv) => {
 
   return {
     devServer: {
+      liveReload: true,
       open: {
         app: {
           name: "firefox-dev-edition",
@@ -50,29 +64,23 @@ module.exports = (env, argv) => {
       rules,
     },
     output: {
-      filename: isProduction ? "main.[contenthash].js" : "main.js",
+      clean: true,
+      filename: isProduction ? "[name].[contenthash].js" : "[name].js",
       path: path.resolve(__dirname, "dist"),
     },
     plugins: [
       new HtmlWebpackPlugin({
+        filename: "index.html",
         template: path.resolve(__dirname, "src", "index.html"),
       }),
       new MiniCSSExtractPlugin({
-        filename: isProduction ? "style.[contenthash].css" : "style.css",
-      }),
-      new CopyPlugin({
-        patterns: [
-          {
-            from: path.resolve(__dirname, "src", "assets/"),
-            to: "assets",
-          },
-        ],
+        filename: isProduction ? "[name].[contenthash].css" : "[name].css",
       }),
     ],
     resolve: {
       alias: {
-        "@images": path.resolve(__dirname, "src/assets/images/"),
-        "@js": path.resolve(__dirname, "src/javascript/"),
+        "@assets": path.resolve(__dirname, "src/assets/"),
+        "@scripts": path.resolve(__dirname, "src/scripts/"),
         "@styles": path.resolve(__dirname, "src/styles/"),
       },
     },
