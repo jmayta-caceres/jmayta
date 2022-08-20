@@ -1,5 +1,3 @@
-import { staticData } from "./static-data.js";
-
 /**
  * Retrieve a GET request for URL given, and return a JSON response.
  *
