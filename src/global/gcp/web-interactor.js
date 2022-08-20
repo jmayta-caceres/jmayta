@@ -1,14 +1,11 @@
 // GLOBAL VARIABLES
 const spreadsheetId = "17NMHK_BFkifaBbmH2NA7nvcK7Dqrqo6zPBYoN2IgkQc";
 
-
 // FUNCTIONS
 function doGet(req) {
   const data = getAllSpreadSheetData(spreadsheetId);
 
-  return ContentService
-          .createTextOutput(JSON.stringify(data))
-          .setMimeType(ContentService.MimeType.JSON);
+  return ContentService.createTextOutput(JSON.stringify(data)).setMimeType(ContentService.MimeType.JSON);
 }
 
 function getAllSpreadSheetData(ssId) {
@@ -40,7 +37,7 @@ function dimensionalArrayToObjectArray(dimensionalArray) {
   const headers = dimensionalArray.shift();
   const objectArray = [];
 
-  for(const row of dimensionalArray) {
+  for (const row of dimensionalArray) {
     const tempObj = {};
     for (let j = 0; j < row.length; j++) {
       tempObj[headers[j]] = row[j];
