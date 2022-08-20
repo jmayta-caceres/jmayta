@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <title>Jheison J. Mayta C.￤ Download my CV.</title>
+  </head>
+  <body x-data="app">
+    <!-- Header -->
+    <header class="header">
+      <figure class="header__portrait">
+        <img
+          src="./assets/images/jmayta.jpg"
+          alt="portrait image"
+          class="header__portrait__img header__portrait__img--circle"
+        />
+      </figure>
+      <div class="header__title">
+        <h1 class="header__title__principal">
+          <span x-text="mainInfo.firstName"></span> <span x-text="mainInfo.lastName"></span>
+        </h1>
+        <ul class="header__title__secondary">
+          <li class="" x-text="mainInfo.primaryTitle"></li>
+          <li class="" x-text="mainInfo.secondaryTitle"></li>
+        </ul>
+      </div>
+      <address class="header__contact-info">
+        <ul>
+          <li class="h-strong" x-text="contactInfo.location"></li>
+          <li><span class="h-strong">t・</span> <span x-text="contactInfo.phoneNumber"></span></li>
+          <li><span class="h-strong">e・</span> <span x-text="contactInfo.email"></span></li>
+          <li><span class="h-strong">w・</span> <span x-text="contactInfo.website"></span></li>
+        </ul>
+      </address>
+    </header>
+    <!-- /Header -->
+
+    <!-- Main -->
+    <main>
+      <hr />
+      <!-- Principal Block -->
+      <section class="cv-block">
+        <header class="cv-block__title">
+          <h2>Experiencia</h2>
+        </header>
+        <!-- Section with body type list -->
+        <template x-for="exp in jmayta.experience">
+          <article class="cv-block__item">
+            <header class="cv-block__item__header mt-4">
+              <h3 class="cv-block__item__header__title" x-text="exp.company"></h3>
+              <div class="cv-block__item__header__date" x-text="humanizeDateRange(exp.dateStart, exp.dateEnd)"></div>
+            </header>
+            <div class="cv-block__item__body pt-3">
+              <h4 class="cv-block__item__body__title" x-text="exp.title"></h4>
+              <!--               
+              <p class="cv-block__item__body__text" x-text="exp.description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque odit quibusdam perferendis
+                veritatis recusandae doloribus laboriosam.
+              </p>
+            -->
+              <ul class="cv-block__item__body__text--list">
+                <template x-for="paragraph in txtToArray(exp.description, '$')">
+                  <li x-text="paragraph"></li>
+                </template>
+              </ul>
+            </div>
+          </article>
+        </template>
+      </section>
+      <!-- /Section with body type list -->
+      <hr />
+      <!-- Section with body type text -->
+      <section class="cv-block">
+        <header class="cv-block__title">
+          <h2>Formación</h2>
+        </header>
+        <template x-for="career in jmayta.formation">
+          <article class="cv-block__item">
+            <header class="cv-block__item__header">
+              <h3 class="cv-block__item__header__title" x-text="career.school"></h3>
+              <div class="cv-block__item__header__date" x-text="humanizeDates(career.dateStart, career.dateEnd)"></div>
+            </header>
+            <div class="cv-block__item__body">
+              <h4 class="cv-block__item__body__title" x-text="career.career"></h4>
+              <p class="cv-block__item__body__text" x-text="career.description"></p>
+            </div>
+          </article>
+        </template>
+      </section>
+      <!-- /Section with body type list -->
+      <hr />
+      <!-- Section with body type text -->
+      <section class="cv-block">
+        <header class="cv-block__title">
+          <h2>Extensión</h2>
+        </header>
+        <template x-for="course in jmayta.extension">
+          <article class="cv-block__item">
+            <header class="cv-block__item__header">
+              <h3 class="cv-block__item__header__title" x-text="course.course"></h3>
+            </header>
+            <div class="cv-block__item__body">
+              <p class="cv-block__item__body__text" x-text="`${course.school} / ${humanizeDate(course.date)}`"></p>
+            </div>
+          </article>
+        </template>
+      </section>
+      <!-- Section with only date for PROFESSIONAL SKILLS -->
+      <section>
+        <header class="cv-block__title">
+          <h2>Habilidades Profesionales</h2>
+        </header>
+        <template x-for="skill in jmayta.professionalSkills">
+          <article class="cv-block__item">
+            <header class="cv-block__item__header">
+              <h3 class="cv-block__item__header__title" x-text="skill.skill"></h3>
+            </header>
+          </article>
+        </template>
+      </section>
+
+      <section>
+        <header class="cv-block__title">
+          <h2>Habilidades Personales</h2>
+        </header>
+        <template x-for="skill in jmayta.personalSkills">
+          <article class="cv-block__item">
+            <header class="cv-block__item__header">
+              <h3 class="cv-block__item__header__title" x-text="skill.skill"></h3>
+            </header>
+          </article>
+        </template>
+      </section>
+    </main>
+
+    <section>
+        <header class="cv-block__title">
+          <h2>Referencias</h2>
+        </header>
+        <template x-for="skill in jmayta.references">
+          <article class="cv-block__item">
+            <header class="cv-block__item__header">
+              <h3 class="cv-block__item__header__title" x-text="skill.skill"></h3>
+            </header>
+          </article>
+        </template>
+      </section>
+    </main>
+    <!-- /Main -->
+
+    <!-- Footer -->
+    <footer>
+      Creado con mis propias manitas y mucho amor. <br /><br />
+      💚
+    </footer>
+    <!-- /Footer -->
+  </body>
+</html>
