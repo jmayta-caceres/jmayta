@@ -4,8 +4,347 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
-    <title>Jheison J. Mayta C.</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" />
+
+    <title>Jheison Mayta | Welcome to my personal site!</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <ul class="navbar__section">
+          <li class="navbar__section__item"><a href="#banner" onclick="toggleMenu();">Home</a></li>
+          <li class="navbar__section__item"><a href="#about" onclick="toggleMenu();">About</a></li>
+          <li class="navbar__section__item"><a href="#services" onclick="toggleMenu();">Services</a></li>
+          <li class="navbar__section__item"><a href="#project" onclick="toggleMenu();">Project</a></li>
+          <li class="navbar__section__item"><a href="#testimonials" onclick="toggleMenu();">Testimonials</a></li>
+          <li class="navbar__section__item"><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+        </ul>
+        <div class="navbar__theme-switch"></div>
+      </nav>
+      <main class="main">
+        <div class="topbar">
+          <a href="" class="topbar__logo">J2MC</a>
+          <div class="topbar__toggle">
+            <i class="bx bx-menu"></i>
+          </div>
+        </div>
+
+        <!-- Banner -->
+        <section class="banner" id="banner">
+          <div class="banner__content">
+            <figure class="banner__figure mb-4">
+              <img
+                class="banner__figure__img"
+                src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png"
+                alt="Jheison Mayta's Photo"
+              />
+            </figure>
+            <h3 class="banner__title">Jheison Mayta</h3>
+            <p class="banner__description">I'm a Creative Full Stack Developer.</p>
+            <a class="banner__btn mt-2" href="/cv.html">Download My CV</a>
+            <ul class="banner__social">
+              <li class="banner__social__item">
+                <a href=""><i class="bx bxl-facebook"></i></a>
+              </li>
+              <li class="banner__social__item">
+                <a href=""><i class="bx bxl-twitter"></i></a>
+              </li>
+              <li class="banner__social__item">
+                <a href=""><i class="bx bxl-linkedin"></i></a>
+              </li>
+              <li class="banner__social__item">
+                <a href=""><i class="bx bxl-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- /Banner -->
+
+        <!-- About -->
+        <section class="about section" id="about">
+          <header class="about__header section__header">
+            <h2 class="section__header__title">About Me</h2>
+          </header>
+          <div class="about__content section__content">
+            <div class="about__content__text section__content__text">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, qui odio odit provident, aliquam
+                repellendus doloribus explicabo totam doloremque, consectetur fugit accusamus a vel! Ea quasi tempora
+                ullam dignissimos iure nisi quibusdam, explicabo perspiciatis saepe eaque error quis nulla sed quae
+                veritatis beatae, incidunt pariatur exercitationem, necessitatibus sit. Unde eum molestias sequi
+                repellat, blanditiis consequatur facere sunt dolorem. <br /><br />
+                Optio soluta suscipit nihil laborum deserunt dicta explicabo blanditiis debitis pariatur, a quas tenetur
+                nulla cumque et cum consequuntur ipsum adipisci expedita repellendus nobis nostrum quibusdam eum
+                repudiandae! Saepe temporibus, nulla et, totam eveniet vero neque autem doloremque earum pariatur
+                dolorum omnis cupiditate accusamus doloribus inventore alias aliquid?.
+              </p>
+            </div>
+            <figure class="about__content__figure">
+              <img class="about__content__figure__img" src="https://dummyimage.com/1024x768" alt="" />
+            </figure>
+          </div>
+        </section>
+        <!-- /About -->
+
+        <!-- Services -->
+        <section class="services section" id="services">
+          <header class="services__header section__header">
+            <h2 class="services__header__title section__header__title">My Services</h2>
+            <p class="services__header__description section__header__description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse voluptas eaque officiis laborum ad adipisci
+              consequuntur repudiandae! Enim porro cupiditate quibusdam eos ipsa ipsam voluptatem, possimus facilis,
+              amet expedita molestiae!
+            </p>
+          </header>
+          <div class="services__content section__content">
+            <div class="services__content__item">
+              <img src="https://dummyimage.com/128x128" alt="" />
+              <h2>Web Design</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam neque id nostrum atque pariatur,
+                exercitationem autem amet voluptate.
+              </p>
+            </div>
+            <div class="services__content__item">
+              <img src="https://dummyimage.com/128x128" alt="" />
+              <h2>Web Development</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam neque id nostrum atque pariatur,
+                exercitationem autem amet voluptate.
+              </p>
+            </div>
+            <div class="services__content__item">
+              <img src="https://dummyimage.com/128x128" alt="" />
+              <h2>Android Apps</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam neque id nostrum atque pariatur,
+                exercitationem autem amet voluptate.
+              </p>
+            </div>
+            <div class="services__content__item">
+              <img src="https://dummyimage.com/128x128" alt="" />
+              <h2>Photography</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam neque id nostrum atque pariatur,
+                exercitationem autem amet voluptate.
+              </p>
+            </div>
+            <div class="services__content__item">
+              <img src="https://dummyimage.com/128x128" alt="" />
+              <h2>Content Writing</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam neque id nostrum atque pariatur,
+                exercitationem autem amet voluptate.
+              </p>
+            </div>
+            <div class="services__content__item">
+              <img src="https://dummyimage.com/128x128" alt="" />
+              <h2>Video Editing</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam neque id nostrum atque pariatur,
+                exercitationem autem amet voluptate.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- /Services -->
+
+        <!-- Projects -->
+        <section class="projects section" id="project">
+          <header class="projects__header section__header">
+            <h2 class="projects__header__title section__header__title">Recent Work</h2>
+            <p class="projects__header__description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse voluptas eaque officiis laborum ad adipisci
+              consequuntur repudiandae! Enim porro cupiditate quibusdam eos ipsa ipsam voluptatem, possimus facilis,
+              amet expedita molestiae!
+            </p>
+          </header>
+          <div class="projects__content">
+            <div class="projects__content__item">
+              <div class="projects__content__item__img">
+                <img src="https://dummyimage.com/400x400" alt="" />
+              </div>
+              <div class="projects__content__item__legend">
+                <h3 class="projects__content__item__legend__txt">Project 01</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, rerum exercitationem natus, aperiam
+                  nemo temporibus..
+                </p>
+                <a class="btn mt-4" href="">
+                  <span class="btn__icon">
+                    <i class="bx bxl-gitlab"></i>
+                  </span>
+                  <span class="btn__text">Source</span>
+                </a>
+              </div>
+            </div>
+            <div class="projects__content__item">
+              <figure class="projects__content__item__img">
+                <img src="https://dummyimage.com/400x400" alt="" />
+              </figure>
+              <div class="projects__content__item__legend">
+                <h3 class="projects__content__item__legend__txt">Project 02</h3>
+              </div>
+            </div>
+            <div class="projects__content__item">
+              <figure class="projects__content__item__img">
+                <img src="https://dummyimage.com/400x400" alt="" />
+              </figure>
+              <div class="projects__content__item__legend">
+                <h3 class="projects__content__item__legend__txt">Project 03</h3>
+              </div>
+            </div>
+            <div class="projects__content__item">
+              <figure class="projects__content__item__img">
+                <img src="https://dummyimage.com/400x400" alt="" />
+              </figure>
+              <div class="projects__content__item__legend">
+                <h3 class="projects__content__item__legend__txt">Project 04</h3>
+              </div>
+            </div>
+            <div class="projects__content__item">
+              <figure class="projects__content__item__img">
+                <img src="https://dummyimage.com/400x400" alt="" />
+              </figure>
+              <div class="projects__content__item__legend">
+                <h3 class="projects__content__item__legend__txt">Project 05</h3>
+              </div>
+            </div>
+            <div class="projects__content__item">
+              <figure class="projects__content__item__img">
+                <img src="https://dummyimage.com/400x400" alt="" />
+              </figure>
+              <div class="projects__content__item__legend">
+                <h3 class="projects__content__item__legend__txt">Project 06</h3>
+              </div>
+            </div>
+            <div class="projects__content__item">
+              <figure class="projects__content__item__img">
+                <img src="https://dummyimage.com/400x400" alt="" />
+              </figure>
+              <div class="projects__content__item__legend">
+                <h3 class="projects__content__item__legend__txt">Project 07</h3>
+              </div>
+            </div>
+            <div class="projects__content__item">
+              <figure class="projects__content__item__img">
+                <img src="https://dummyimage.com/400x400" alt="" />
+              </figure>
+              <div class="projects__content__item__legend">
+                <h3 class="projects__content__item__legend__txt">Project 08</h3>
+              </div>
+            </div>
+            <div class="projects__content__item">
+              <figure class="projects__content__item__img">
+                <img src="https://dummyimage.com/400x400" alt="" />
+              </figure>
+              <div class="projects__content__item__legend">
+                <h3 class="projects__content__item__legend__txt">Project 09</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /Projects -->
+
+        <!-- Testimonials -->
+        <section class="testimonials section" id="testimonials">
+          <header class="testimonials__header section__header">
+            <h2 class="testimonials__header__title section__header__title">Testimonials</h2>
+            <p class="testimonials__header__description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse voluptas eaque officiis laborum ad adipisci
+              consequuntur repudiandae! Enim porro cupiditate quibusdam eos ipsa ipsam voluptatem, possimus facilis,
+              amet expedita molestiae!
+            </p>
+          </header>
+          <div class="testimonials__content">
+            <div class="testimonials__content__item">
+              <figure class="testimonials__content__item__fig">
+                <img class="testimonials__content__item__fig__img" src="https://via.placeholder.com/100" alt="" />
+                <blockquote>
+                  <p class="testimonials__content__item__txt">
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto laborum, fugit quibusdam
+                    expedita tenetur cupiditate odio possimus repellat recusandae. Magni, pariatur deleniti. Libero
+                    sequi, ex facilis velit pariatur accusamus eos."
+                  </p>
+                </blockquote>
+              </figure>
+              <h4 class="testimonials__content__item__author">
+                Someone Famouse<br />
+                <span class="testimonials__content__item__author__title">Website Designer</span>
+              </h4>
+            </div>
+            <div class="testimonials__content__item">
+              <figure class="testimonials__content__item__fig">
+                <img class="testimonials__content__item__fig__img" src="https://via.placeholder.com/100" alt="" />
+                <blockquote>
+                  <p class="testimonials__content__item__txt">
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto laborum, fugit quibusdam
+                    expedita tenetur cupiditate odio possimus repellat recusandae. Magni, pariatur deleniti. Libero
+                    sequi, ex facilis velit pariatur accusamus eos."
+                  </p>
+                </blockquote>
+              </figure>
+              <h4 class="testimonials__content__item__author">
+                Someone Famouse<br />
+                <span class="testimonials__content__item__author__title">Website Designer</span>
+              </h4>
+            </div>
+            <div class="testimonials__content__item">
+              <figure class="testimonials__content__item__fig">
+                <img class="testimonials__content__item__fig__img" src="https://via.placeholder.com/100" alt="" />
+                <blockquote>
+                  <p class="testimonials__content__item__txt">
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto laborum, fugit quibusdam
+                    expedita tenetur cupiditate odio possimus repellat recusandae. Magni, pariatur deleniti. Libero
+                    sequi, ex facilis velit pariatur accusamus eos."
+                  </p>
+                </blockquote>
+              </figure>
+              <h4 class="testimonials__content__item__author">
+                Someone Famouse<br />
+                <span class="testimonials__content__item__author__title">Website Designer</span>
+              </h4>
+            </div>
+          </div>
+        </section>
+        <!-- /Testimonials -->
+
+        <!-- Contact Form -->
+        <section class="contact-form section" id="contact">
+          <header class="contact-form__header section__header">
+            <h2 class="contact-form__header__title section__header__title">Let's Say Hi</h2>
+            <p class="contact-form__header__description section__header__description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </p>
+          </header>
+          <div class="contact-form__content section__content">
+            <div class="contact-form__content__row">
+              <input type="text" name="" placeholder="First Name" />
+              <input type="text" name="" placeholder="Last Name" />
+            </div>
+            <div class="contact-form__content__row">
+              <input type="text" name="" placeholder="Email Address" />
+              <input type="text" name="" placeholder="Mobile No." />
+            </div>
+            <div class="contact-form__content__row--2">
+              <textarea name="" id="" placeholder="Mesasge"></textarea>
+            </div>
+            <div class="contact-form__content__row--2">
+              <input type="submit" value="Send" />
+            </div>
+          </div>
+        </section>
+        <!-- /Contact Form -->
+
+        <!-- Copyright Text -->
+        <section class="copyright">
+          <p>Copyright @ 2022 Jheison Mayta. All Right Reserved.</p>
+        </section>
+        <!-- /Copyright Text -->
+      </main>
+    </div>
+  </body>
 </html>
