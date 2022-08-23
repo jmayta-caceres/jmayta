@@ -7,27 +7,27 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" />
 
     <title>Jheison Mayta | Welcome to my personal site!</title>
   </head>
-  <body>
+  <body x-data="j2mc" :class="darkActive && 'dark'">
     <div class="container">
-      <nav class="navbar">
+      <nav class="navbar" :class="navActive && 'nav-active'">
         <ul class="navbar__section">
-          <li class="navbar__section__item"><a href="#banner" onclick="toggleMenu();">Home</a></li>
-          <li class="navbar__section__item"><a href="#about" onclick="toggleMenu();">About</a></li>
-          <li class="navbar__section__item"><a href="#services" onclick="toggleMenu();">Services</a></li>
-          <li class="navbar__section__item"><a href="#project" onclick="toggleMenu();">Project</a></li>
-          <li class="navbar__section__item"><a href="#testimonials" onclick="toggleMenu();">Testimonials</a></li>
-          <li class="navbar__section__item"><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+          <li class="navbar__section__item"><a href="#banner" @click="closeNav">Home</a></li>
+          <li class="navbar__section__item"><a href="#about" @click="closeNav">About</a></li>
+          <li class="navbar__section__item"><a href="#services" @click="closeNav">Services</a></li>
+          <li class="navbar__section__item"><a href="#project" @click="closeNav">Project</a></li>
+          <li class="navbar__section__item"><a href="#testimonials" @click="closeNav">Testimonials</a></li>
+          <li class="navbar__section__item"><a href="#contact" @click="closeNav">Contact</a></li>
         </ul>
-        <div class="navbar__theme-switch"></div>
+        <button @click="toggleDark" class="navbar__theme-switch" :class="darkActive && 'dark'"></button>
       </nav>
-      <main class="main">
+      <main class="main" :class="navActive && 'nav-active'">
         <div class="topbar">
-          <a href="" class="topbar__logo">J2MC</a>
-          <div class="topbar__toggle">
+          <div @click="toggleNav" class="topbar__toggle-btn">
             <i class="bx bx-menu"></i>
           </div>
         </div>
