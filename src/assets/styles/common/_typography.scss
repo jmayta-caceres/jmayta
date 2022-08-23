@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
+
+// Global Variables
+$typo-headlines: "Amaranth";
+$typo-body: "Open Sans";
+
+// Mixins
+@mixin typo-styles($selector, $family, $weight, $size, $letter-spacing, $factor: 1) {
+  #{$selector} {
+    @if $family != "" {
+      font-family: $family;
+    }
+    font-weight: $weight;
+    font-size: $size * $factor;
+    letter-spacing: $letter-spacing * $factor;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $typo-headlines, sans-serif;
+}
+
+p {
+  font-family: $typo-body;
+}

@@ -27,6 +27,7 @@
       </nav>
       <main class="main" :class="navActive && 'nav-active'">
         <div class="topbar">
+          <a href="/" class="topbar__logo">&#8322;JMC</a>
           <div @click="toggleNav" class="topbar__toggle-btn">
             <i class="bx bx-menu"></i>
           </div>
@@ -53,10 +54,10 @@
                 <a href=""><i class="bx bxl-twitter"></i></a>
               </li>
               <li class="banner__social__item">
-                <a href=""><i class="bx bxl-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-gitlab"></i></a>
               </li>
               <li class="banner__social__item">
-                <a href=""><i class="bx bxl-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-github-alt"></i></a>
               </li>
             </ul>
           </div>
@@ -173,11 +174,11 @@
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, rerum exercitationem natus, aperiam
                   nemo temporibus..
                 </p>
-                <a class="btn mt-4" href="">
+                <a class="btn--labeled mt-4" href="">
                   <span class="btn__icon">
-                    <i class="bx bxl-gitlab"></i>
+                    <i class="fa-brands fa-git-alt"></i>
                   </span>
-                  <span class="btn__text">Source</span>
+                  <span class="btn__text">Source Code</span>
                 </a>
               </div>
             </div>
@@ -330,7 +331,7 @@
               <input type="text" name="" placeholder="Mobile No." />
             </div>
             <div class="contact-form__content__row--2">
-              <textarea name="" id="" placeholder="Mesasge"></textarea>
+              <textarea name="" id="" placeholder="Message"></textarea>
             </div>
             <div class="contact-form__content__row--2">
               <input type="submit" value="Send" />

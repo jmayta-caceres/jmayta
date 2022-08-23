@@ -1,0 +1,128 @@
+@use "sass:math";
+
+.h-pd-t {
+  padding-top: 0.5rem;
+}
+
+.h-strong {
+  font-weight: bold;
+}
+
+.h-italic {
+  font-style: italic;
+}
+
+/* Genera un padding set similar a Tailwind
+ * https://tailwindcss.com/docs/padding
+ */
+// { mixins } doc: https://sass-lang.com/documentation/at-rules/mixin
+@mixin padding-gen($valueStart, $valueEnd) {
+  // { for } doc: https://sass-lang.com/documentation/at-rules/control/for
+  @for $i from $valueStart through $valueEnd {
+    .p-#{$i} {
+      padding: $i * 0.25rem;
+    }
+
+    .pb-#{$i} {
+      padding-bottom: $i * 0.25rem;
+    }
+
+    .pl-#{$i} {
+      padding-left: $i * 0.25rem;
+    }
+
+    .pt-#{$i} {
+      padding-top: $i * 0.25rem;
+    }
+
+    .pr-#{$i} {
+      padding-right: $i * 0.25rem;
+    }
+
+    .px-#{$i} {
+      padding: {
+        left: $i * 0.25rem;
+        right: $i * 0.25rem;
+      }
+    }
+
+    .py-#{$i} {
+      padding: {
+        top: calc($i * 0.25rem);
+        bottom: calc($i * 0.25rem);
+      }
+    }
+
+    .m-#{$i} {
+      margin: $i * 0.25rem;
+    }
+
+    .mb-#{$i} {
+      margin-bottom: $i * 0.25rem;
+    }
+
+    .ml-#{$i} {
+      margin-left: $i * 0.25rem;
+    }
+
+    .mt-#{$i} {
+      margin-top: $i * 0.25rem;
+    }
+
+    .mr-#{$i} {
+      margin-right: $i * 0.25rem;
+    }
+
+    .mx-#{$i} {
+      margin: {
+        left: $i * 0.25rem;
+        right: $i * 0.25rem;
+      }
+    }
+
+    .my-#{$i} {
+      margin: {
+        top: calc($i * 0.25rem);
+        bottom: calc($i * 0.25rem);
+      }
+    }
+  }
+}
+
+@mixin flex-center($horizontal: true, $vertical: true) {
+  display: flex;
+  @if $horizontal {
+    justify-content: center;
+  }
+  @if $vertical {
+    align-items: center;
+  }
+}
+
+@mixin btn-labeled($backgroundIcon, $colorIcon, $backgroundLabel, $colorLabel) {
+  @include flex-center();
+  border-radius: 0.28571429rem;
+  height: 32px;
+  overflow: hidden;
+
+  .btn__icon {
+    @include flex-center();
+    background-color: $backgroundIcon;
+    color: $colorIcon;
+    font-size: 1rem;
+    height: 100%;
+    width: 32px;
+  }
+
+  .btn__text {
+    @include flex-center();
+    background-color: $backgroundLabel;
+    color: $colorLabel;
+    font-size: 0.7rem;
+    height: 100%;
+    padding: 0 10px;
+  }
+}
+
+// ------------------------------------------------------------------------------------------------
+@include padding-gen(1, 24);

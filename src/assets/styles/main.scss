@@ -1,0 +1,23 @@
+@use "common/reset";
+@use "./common/helpers";
+// @use "./common/typography";
+// @use "./components/header";
+
+// @use "../../pages/00-index/styles/index";
+
+// 320px — 480px: Mobile devices
+// 481px — 768px: iPads, Tablets
+// 769px — 1024px: Small screens, laptops
+// 1025px — 1200px: Desktops, large screens
+// 1201px and more —  Extra large screens, TV
+// 320 - 768px
+// 769 - 1024px -> min-width: 769px
+// 1025 - 1200px -> min-width: 1025px
+// 1201 - ++  -> horizontal concept taking the height wide :3
+
+// min-width
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px;
